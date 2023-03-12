@@ -1,7 +1,6 @@
 
-
 body {
-    padding: 30px;
+    padding: 0 30px;
     background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -28,23 +27,38 @@ body {
     margin: 30px 0;
     padding: 10px 0;
     border: 2px solid #fff;
+    width: 100%;
 }
 
-.memeItemTilte {
+.memeItemTitle {
     margin-bottom: 10px;
+    padding: 10px 0;
     font-size: 28px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.5s ease-out;
+}
+
+.memeItem:hover {
+    background-color: blanchedalmond;
 }
 
 .memeItemInput {
-
+    appearance: none;
+    position: absolute;
 }
-
+  
 .memeItemImg {
     height: 400px;
+    display: none;
 }
 
-.memeItemText {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 10px;
-}
+.memeItemInput:checked ~ .memeItemImg {
+    display: block;
+} 
+
+.memeItemInput:checked ~ .memeItemTitle {
+     background-color: blanchedalmond;
+} 
